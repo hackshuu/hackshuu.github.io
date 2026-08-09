@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: hackshuu/hackshuu.github.io # Seu repositório no GitHub
-  branch: main
-  base_url: https://decap-oauth-gateway.sektual.com # Gateway OAuth gratuito para GitHub Pages
+  repo: hackshuu/hackshuu.github.io
+  branch: main # Mude para 'master' se a sua branch principal for master
+  base_url: https://decap-oauth-gateway.sektual.com
   auth_endpoint: /auth
 
 media_folder: "uploads"
