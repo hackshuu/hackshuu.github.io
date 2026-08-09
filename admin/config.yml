@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
-  branch: main # Mude para 'master' se a sua branch principal for master
+  name: github
+  repo: hackshuu/hackshuu.github.io # Seu repositório no GitHub
+  branch: main
+  base_url: https://decap-oauth-gateway.sektual.com # Gateway OAuth gratuito para GitHub Pages
+  auth_endpoint: /auth
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -14,5 +17,5 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "ID do Vídeo no YouTube", name: "youtube_id", widget: "string", required: false, hint: "Exemplo: dQw4w9WgXcQ (Apenas o código do final da URL)" }
+      - { label: "ID do Vídeo no YouTube", name: "youtube_id", widget: "string", required: false }
       - { label: "Conteúdo do Post", name: "body", widget: "markdown" }
