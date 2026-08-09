@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # Mude para 'master' se a sua branch principal for master
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Postagens & Vídeos"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "ID do Vídeo no YouTube", name: "youtube_id", widget: "string", required: false, hint: "Exemplo: dQw4w9WgXcQ (Apenas o código do final da URL)" }
+      - { label: "Conteúdo do Post", name: "body", widget: "markdown" }
